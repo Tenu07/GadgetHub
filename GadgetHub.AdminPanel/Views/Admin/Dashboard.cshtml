@@ -1,0 +1,98 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="welcome-section fade-in">
+    <h2 class="page-title">Welcome, Admin!</h2>
+    <p class="lead">You are the bridge between customers and distributors. Manage products, orders, and users efficiently.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3 mb-4 fade-in-delay-1">
+        <div class="card stat-card shadow">
+            <div class="card-body">
+                <i class="fas fa-box text-primary"></i>
+                <div class="count">42</div>
+                <div class="title">Products</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4 fade-in-delay-2">
+        <div class="card stat-card shadow">
+            <div class="card-body">
+                <i class="fas fa-shopping-cart text-success"></i>
+                <div class="count">128</div>
+                <div class="title">Orders</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4 fade-in-delay-3">
+        <div class="card stat-card shadow">
+            <div class="card-body">
+                <i class="fas fa-users text-info"></i>
+                <div class="count">36</div>
+                <div class="title">Customers</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4 fade-in-delay-4">
+        <div class="card stat-card shadow">
+            <div class="card-body">
+                <i class="fas fa-truck text-warning"></i>
+                <div class="count">12</div>
+                <div class="title">Distributors</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4 fade-in-delay-1">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-box-open text-primary"></i> Product Management</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Add, edit, or remove products available for customers.</p>
+                <a href="/Admin/Products" class="btn btn-primary"><i class="fas fa-list"></i> Manage Products</a>
+                <a href="/Admin/AddProduct" class="btn btn-success ms-2"><i class="fas fa-plus"></i> Add Product</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4 fade-in-delay-2">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-clipboard-list text-info"></i> Order Management</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">View and manage all customer orders and distributor assignments.</p>
+                <a href="/Admin/Orders" class="btn btn-info"><i class="fas fa-eye"></i> Manage Orders</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4 fade-in-delay-3">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-users text-warning"></i> Customer Management</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">View and manage customer accounts and information.</p>
+                <a href="/Admin/Customers" class="btn btn-warning"><i class="fas fa-user-friends"></i> Manage Customers</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4 fade-in-delay-4">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-chart-line text-success"></i> Analytics</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">View sales reports and business analytics.</p>
+                <a href="#" class="btn btn-success"><i class="fas fa-chart-bar"></i> View Reports</a>
+            </div>
+        </div>
+    </div>
+</div>

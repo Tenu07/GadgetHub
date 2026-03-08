@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="welcome-section text-center fade-in">
+    <h1 class="page-title">Welcome Distributor!</h1>
+    <p class="lead">You are a key partner in delivering the latest gadgets to our customers. Manage quotations and orders efficiently.</p>
+    <hr />
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4 fade-in-delay-1">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-primary"><i class="fas fa-file-invoice-dollar fa-2x mb-3"></i> Quotation Requests</h5>
+                    <p class="card-text flex-grow-1">View and respond to customer quotation requests.</p>
+                    <a href="/Distributor/QuotationRequests" class="btn btn-primary mt-auto">Quotation Requests</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 fade-in-delay-2">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success"><i class="fas fa-truck-fast fa-2x mb-3"></i> Confirm Orders</h5>
+                    <p class="card-text flex-grow-1">Confirm and manage orders placed by GadgetHub.</p>
+                    <a href="/Distributor/ConfirmOrders" class="btn btn-success mt-auto">Confirm Orders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8 fade-in-delay-3">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i>Performance Overview</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-file-invoice text-primary fa-2x mb-2"></i>
+                            <div class="count">24</div>
+                            <div class="title">Pending Requests</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-truck text-success fa-2x mb-2"></i>
+                            <div class="count">42</div>
+                            <div class="title">Orders Confirmed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-dollar-sign text-warning fa-2x mb-2"></i>
+                            <div class="count">$12,450</div>
+                            <div class="title">Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

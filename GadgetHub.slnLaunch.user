@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "GadgetHub.API\\GadgetHub.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "GadgetHub.AdminPanel\\GadgetHub.AdminPanel.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "GadgetHub.CustomerPortal\\GadgetHub.CustomerPortal.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "GadgetHub.DistributorPortal\\GadgetHub.DistributorPortal.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

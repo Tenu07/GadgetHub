@@ -1,0 +1,79 @@
+@model GadgetHub.Models.Product
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<div class="page-title">
+    <h2><i class="fas fa-plus-circle me-2"></i>Add New Product</h2>
+    <p class="lead">Add a new product to the GadgetHub inventory.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-box me-2"></i>Product Information</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="AddProduct" method="post">
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Product Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter product name" />
+                        <div class="form-text">Enter the full name of the product.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label">Description</label>
+                        <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter product description"></textarea>
+                        <div class="form-text">Provide a detailed description of the product.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Price" class="form-label">Price ($)</label>
+                                <input asp-for="Price" class="form-control" type="number" step="0.01" placeholder="0.00" />
+                                <div class="form-text">Enter the price in USD.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Category</label>
+                                <select class="form-control" id="category" name="category">
+                                    <option value="">Select a category</option>
+                                    <option value="smartphone">Smartphone</option>
+                                    <option value="laptop">Laptop</option>
+                                    <option value="tablet">Tablet</option>
+                                    <option value="accessory">Accessory</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Product Image</label>
+                        <input class="form-control" type="file" id="image" name="image">
+                        <div class="form-text">Upload an image of the product (optional).</div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="/Admin/Products" class="btn btn-secondary"><i class="fas fa-arrow-left me-1"></i>Back to Products</a>
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save me-1"></i>Add Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Product Guidelines</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li class="mb-2">Ensure product names are clear and descriptive</li>
+                    <li class="mb-2">Include key specifications in the description</li>
+                    <li class="mb-2">Use consistent pricing format</li>
+                    <li class="mb-2">Select the appropriate category</li>
+                    <li>Upload high-quality product images</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

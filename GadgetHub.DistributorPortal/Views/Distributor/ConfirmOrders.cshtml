@@ -1,0 +1,106 @@
+@model List<GadgetHub.Models.Order>
+@{
+    ViewData["Title"] = "Confirm Orders";
+}
+
+<div class="page-title">
+    <h2><i class="fas fa-truck-fast me-2"></i>Confirm Orders</h2>
+    <p class="lead">Review and confirm orders placed by GadgetHub customers.</p>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="fas fa-list me-2"></i>Pending Orders</h5>
+        <div class="input-group" style="width: 300px;">
+            <input type="text" class="form-control" placeholder="Search orders...">
+            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.OrderId</td>
+                            <td>@order.CustomerId</td>
+                            <td>@order.OrderDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <span class="badge bg-@(order.Status == "Pending" ? "warning" : order.Status == "Confirmed" ? "info" : order.Status == "Shipped" ? "primary" : "success")">@order.Status</span>
+                            </td>
+                            <td>$0.00</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></a>
+                                <button class="btn btn-sm btn-success"><i class="fas fa-check me-1"></i>Confirm</button>
+                            </td>
+                        </tr>
+                    }
+                    <!-- Sample data for demonstration -->
+                    <tr>
+                        <td>ORD-2025-001</td>
+                        <td>CUST-101</td>
+                        <td>Jul 28, 2025</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                        <td>$1,299.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></a>
+                            <button class="btn btn-sm btn-success"><i class="fas fa-check me-1"></i>Confirm</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ORD-2025-002</td>
+                        <td>CUST-102</td>
+                        <td>Jul 27, 2025</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                        <td>$899.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></a>
+                            <button class="btn btn-sm btn-success"><i class="fas fa-check me-1"></i>Confirm</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ORD-2025-003</td>
+                        <td>CUST-103</td>
+                        <td>Jul 26, 2025</td>
+                        <td><span class="badge bg-info">Confirmed</span></td>
+                        <td>$1,199.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></a>
+                            <button class="btn btn-sm btn-success" disabled><i class="fas fa-check me-1"></i>Confirmed</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Order Processing Guide</h5>
+            </div>
+            <div class="card-body">
+                <ol class="mb-0">
+                    <li class="mb-2">Review the order details and ensure product availability</li>
+                    <li class="mb-2">Click the "Confirm" button to acknowledge the order</li>
+                    <li class="mb-2">Prepare the order for shipping within 24 hours</li>
+                    <li class="mb-2">Update the order status to "Shipped" once dispatched</li>
+                    <li>Mark as "Delivered" once the customer receives the order</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

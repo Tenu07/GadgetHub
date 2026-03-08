@@ -1,0 +1,105 @@
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<div class="page-title">
+    <h2><i class="fas fa-cart-plus me-2"></i>Place Order</h2>
+    <p class="lead">Select products and quantities to place your order.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-box me-2"></i>Order Details</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="product" class="form-label">Select Product</label>
+                        <select class="form-control" id="product" name="product">
+                            <option value="">Choose a product</option>
+                            <option value="101">iPhone 15 Pro - $999.00</option>
+                            <option value="102">Samsung Galaxy S24 - $899.00</option>
+                            <option value="103">MacBook Air M2 - $1,199.00</option>
+                            <option value="104">iPad Pro - $1,099.00</option>
+                        </select>
+                        <div class="form-text">Select the product you want to order.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" class="form-control" min="1" value="1" />
+                        <div class="form-text">Enter the quantity you want to order.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="shipping" class="form-label">Shipping Address</label>
+                        <textarea class="form-control" id="shipping" name="shipping" rows="3" placeholder="Enter your full shipping address"></textarea>
+                        <div class="form-text">Enter the complete shipping address for this order.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="payment" class="form-label">Payment Method</label>
+                                <select class="form-control" id="payment" name="payment">
+                                    <option value="">Select payment method</option>
+                                    <option value="credit">Credit Card</option>
+                                    <option value="debit">Debit Card</option>
+                                    <option value="paypal">PayPal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="delivery" class="form-label">Delivery Option</label>
+                                <select class="form-control" id="delivery" name="delivery">
+                                    <option value="standard">Standard Delivery (5-7 days)</option>
+                                    <option value="express">Express Delivery (2-3 days) +$15.00</option>
+                                    <option value="overnight">Overnight Delivery +$35.00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="/Customer/Products" class="btn btn-secondary"><i class="fas fa-arrow-left me-1"></i>Back to Products</a>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-1"></i>Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Order Summary</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal:</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Shipping:</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Tax:</span>
+                    <span>$0.00</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Total:</span>
+                    <span>$0.00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-shield-alt me-2"></i>Order Security</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-0">Your payment information is securely encrypted and processed. We never store your full credit card information.</p>
+            </div>
+        </div>
+    </div>
+</div>

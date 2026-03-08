@@ -1,0 +1,11 @@
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\bin\Debug\net9.0\GadgetHub.Models.deps.json
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\bin\Debug\net9.0\GadgetHub.Models.dll
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\bin\Debug\net9.0\GadgetHub.Models.pdb
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.AssemblyInfoInputs.cache
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.AssemblyInfo.cs
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.dll
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\refint\GadgetHub.Models.dll
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\GadgetHub.Models.pdb
+C:\Users\Asus\OneDrive\Desktop\GadgetHub_Tenuli\GadgetHub.Models\obj\Debug\net9.0\ref\GadgetHub.Models.dll

@@ -1,0 +1,116 @@
+@model List<GadgetHub.Models.Order>
+@{
+    ViewData["Title"] = "Your Orders";
+}
+
+<div class="page-title">
+    <h2><i class="fas fa-list-check me-2"></i>Your Orders</h2>
+    <p class="lead">Track your order status and delivery information.</p>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Order History</h5>
+        <div class="input-group" style="width: 300px;">
+            <input type="text" class="form-control" placeholder="Search orders...">
+            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.OrderId</td>
+                            <td>@order.OrderDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <span class="badge bg-@(order.Status == "Pending" ? "warning" : order.Status == "Confirmed" ? "info" : order.Status == "Shipped" ? "primary" : "success")">@order.Status</span>
+                            </td>
+                            <td>$0.00</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-eye me-1"></i>View Details</a>
+                            </td>
+                        </tr>
+                    }
+                    <!-- Sample data for demonstration -->
+                    <tr>
+                        <td>ORD-2025-001</td>
+                        <td>Jul 28, 2025</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                        <td>$1,299.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-eye me-1"></i>View Details</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ORD-2025-002</td>
+                        <td>Jul 27, 2025</td>
+                        <td><span class="badge bg-info">Confirmed</span></td>
+                        <td>$899.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-eye me-1"></i>View Details</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ORD-2025-003</td>
+                        <td>Jul 26, 2025</td>
+                        <td><span class="badge bg-success">Delivered</span></td>
+                        <td>$1,199.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-eye me-1"></i>View Details</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Order Status Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-warning me-2">Pending</span>
+                            <span>Order received, awaiting confirmation</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-info me-2">Confirmed</span>
+                            <span>Order confirmed by distributor</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-primary me-2">Shipped</span>
+                            <span>Order has been shipped</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-success me-2">Delivered</span>
+                            <span>Order successfully delivered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
